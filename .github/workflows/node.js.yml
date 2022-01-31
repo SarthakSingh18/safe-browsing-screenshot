@@ -34,5 +34,5 @@ jobs:
       with:
         ref: main
     - name: Buld the docker image
-      run: docker build --tag safe-browsing-screenshot:$(date) .
+      run: docker build --tag safebrowsingscreenshot:$(date) .
       

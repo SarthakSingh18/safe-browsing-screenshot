@@ -20,11 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: bash test
-      shell: bash
-      run: | 
-        echo ${{secrets.DOCKER_USERNAME}}
-          | 
     - uses: actions/checkout@v2
       with:
         ref: main

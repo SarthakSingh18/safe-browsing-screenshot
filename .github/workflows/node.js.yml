@@ -30,3 +30,9 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
+    - uses: actions/checkout@v2
+      with:
+        ref: main
+    - name: Buld the docker image
+      run: docker build . --file Dockerfile --tag safe-browsing-screenshot:${date + %s)
+      

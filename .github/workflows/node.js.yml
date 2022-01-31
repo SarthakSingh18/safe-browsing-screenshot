@@ -35,6 +35,8 @@ jobs:
         ref: main
     - name: Buld the docker image
       run: docker build --tag safebrowsingscreenshot .
+    - name: Adding Image tag
+      run: docker tag safebrowsingscreenshot:latest yuprobot/safebrowsing/safebrowsingscreenshot:latest
     - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:

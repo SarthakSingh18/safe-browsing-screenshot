@@ -1,0 +1,23 @@
+{
+  "name": "docker-screenshot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "jest --watchAll",
+    "prod":"node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
+  }
+}

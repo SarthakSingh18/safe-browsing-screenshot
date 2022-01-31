@@ -10,5 +10,5 @@ describe("Click-Screenshot API Testing",()=>{
         .get("/ping")
         .expect(200)
     })
-
+    done();
 })

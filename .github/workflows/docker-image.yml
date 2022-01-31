@@ -1,26 +1,16 @@
-name: Docker Image CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+on: push
+name: npm build, lint, test and publish
 jobs:
-
   build-and-publish:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: npm install
-      uses: actions/npm@master
-      with: 
-        args: install
-    - name: npm test
-      uses: actions/npm@master
-      with: 
-        args: run test 
-    - uses: actions/checkout@master
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - uses: actions/checkout@master
+      - name: npm install
+        uses: actions/npm@master
+        with:
+          args: install
+      - name: npm test
+        uses: actions/npm@master
+        with:
+          args: run test

@@ -5,8 +5,5 @@ const route = require("./routes/getRoute");
 const pingRoute = require("./routes/ping");
 app.use("/getScreenshot",route);
 app.use("/ping",pingRoute);
-app.listen(port,()=>{
-    console.log(`Listening on ${port}`);
-})
 
 module.exports = app;

@@ -25,4 +25,4 @@ EXPOSE 8080
 
 RUN npm ci
 
-CMD ["node", "app.js"]
+CMD ["node", "app.js",""]

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const clickScreenshot = require("../js/index");
+const clickScreenshot = require("../js/screenshot");
 const fs = require("fs");
 router.get("/",(req,res)=>{
     clickScreenshot.clickScreenshot(req.query.url).then((result)=>{
